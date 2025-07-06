@@ -85,7 +85,7 @@ async function loadLatestModel() {
                 // Position camera to fit entire model
                 const size = box.getSize(new THREE.Vector3());
                 const maxDim = Math.max(size.x, size.y, size.z);
-                const distance = maxDim * 1.5; // Give some breathing room
+                const distance = maxDim * 1.5; 
                 
                 camera.position.copy(center);
                 camera.position.add(new THREE.Vector3(distance, distance * 0.4, distance));
