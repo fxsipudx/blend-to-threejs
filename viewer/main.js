@@ -22,7 +22,7 @@ camera.position.set(0, 1, 5);
 controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 
-// Lighting setup - three-point lighting for better model visibility
+// Lighting setup 
 scene.add(new THREE.AmbientLight(0x404040, 0.6));
 
 const mainLight = new THREE.DirectionalLight(0xffffff, 1.0);
