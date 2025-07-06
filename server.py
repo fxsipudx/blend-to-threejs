@@ -5,7 +5,7 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 import threading, time, os
 
-# Path setup - absolute paths work regardless of where script is run
+# Path setup 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 EXPORTS_FOLDER = os.path.join(PROJECT_ROOT, 'blender_exports')
 STATIC_FOLDER = os.path.join(PROJECT_ROOT, 'viewer')
@@ -95,5 +95,5 @@ if __name__ == '__main__':
     # Run file watcher in background thread
     threading.Thread(target=start_watcher, daemon=True).start()
     
-    # Start Flask server (disable auto-reloader to avoid duplicate processes)
+    # Start Flask server 
     socketio.run(app, port=5000, debug=True, use_reloader=False)
